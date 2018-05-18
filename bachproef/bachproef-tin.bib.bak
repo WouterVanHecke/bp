@@ -101,8 +101,10 @@
 }
 
 @WWW{pic1,
-  author = {Can Celikbilek, Bulent Erenay, Gürsel A. Süer},
+  author = {Can Celikbilek},
   title  = {A Fuzzy Approach for a Supply Chain Network Design Problem - Scientific Figure on ResearchGate},
+  year   = {2015},
+  date   = {2015-05-01},
   url    = {https://www.researchgate.net/figure/A-generic-supply-chain-network_fig1_280158117},
 }
 

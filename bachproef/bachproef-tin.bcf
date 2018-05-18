@@ -2133,9 +2133,13 @@
     <bcf:citekey order="6">voor1</bcf:citekey>
     <bcf:citekey order="7">wallet1</bcf:citekey>
     <bcf:citekey order="8">blockchain1</bcf:citekey>
-    <bcf:citekey order="9">scm1</bcf:citekey>
-    <bcf:citekey order="10">composer1</bcf:citekey>
-    <bcf:citekey order="11">pic1</bcf:citekey>
+    <bcf:citekey order="9">blockchain1</bcf:citekey>
+    <bcf:citekey order="10">blockchain1</bcf:citekey>
+    <bcf:citekey order="11">blockchain1</bcf:citekey>
+    <bcf:citekey order="12">blockchain1</bcf:citekey>
+    <bcf:citekey order="13">scm1</bcf:citekey>
+    <bcf:citekey order="14">composer1</bcf:citekey>
+    <bcf:citekey order="15">pic1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

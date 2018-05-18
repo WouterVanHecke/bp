@@ -49,9 +49,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Hashing}{29}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Cryptografie}{30}{section.5.5}
+\contentsline {section}{\numberline {5.5}Cryptografie}{31}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Het opslaan van data}{30}{section.5.6}
+\contentsline {section}{\numberline {5.6}Het opslaan van data}{32}{section.5.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Supply Chain}{33}{chapter.6}
 \defcounter {refsection}{0}\relax 
@@ -60,6 +60,10 @@
 \contentsline {section}{\numberline {6.2}Supply Chain Management}{34}{section.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Problemen met supply chain}{35}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Oplossing?}{35}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Conclusie problemen}{36}{section.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}HyperLedger composer prototype}{37}{chapter.8}
 \defcounter {refsection}{0}\relax 
@@ -83,7 +87,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.3}resultaten}{49}{section.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.4}conslusie resultaten}{54}{section.9.4}
+\contentsline {section}{\numberline {9.4}conslusie resultaten}{53}{section.9.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Toekomstig werk}{55}{chapter.10}
 \defcounter {refsection}{0}\relax 

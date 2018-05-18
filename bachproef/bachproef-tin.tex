@@ -170,19 +170,31 @@ Om dit probleem op te lossen wordt dus de technologie van de blockchain gebruikt
 Op een blockchain krijg je te maken met heel veel data, deze data moet je op een snelle en efficiënte manier uniek maken en kunnen vergelijken. Vandaar dat er hier hashing wordt toegepast. Hash functies zijn kleine programma's dat eender welke data als input krijgt en die data verandert in een combinatie van hexadecimale getallen.
 \\*\\*\textbf{Aspecten van cryptografische hash functies}\\*\\*
 Bij het gebruik van cryptografische hash functies, zijn de hash values altijd uniek. Identieke input zal altijd een identieke hash value geven.\\*De output is pseudorandom, dat betekent dat de output van een bijna identieke input, veel verschil kan hebben.\\*Een hashing functie is een 'one-way functie', dat betekent dat je bijna onmogelijk van de output terug naar de input kan gaan.\\*Er zijn miljoenen verschillende combinatie van hash values, dus de kans dat er twee keer dezelfde hash value wordt gevonden voor een identieke input is immens klein.
-\\*\\*\textbf{Een voorbeeld van hashing}\\*\\*
-\\*\\*\textbf{Verschillende hash patronen}\\*\\*
-Het eerste en simpelste voorbeeld is onafhankelijk hashen. In dit partoon wordt van elke data individueel de hash value berekend.\\*\\*In het volgende voorbeeld bespreken we het herhaald hashen. In dit partoon wordt de input eerst gehashed, en daarna wordt de hash value nog eens gehashed. Dit is mogelijk omdat een hash value ook een vorm van data is en daarom kan dienen als input.\\*\\*Het volgende partoon gaat over combinerend hashen. Stel dat we 2 inputs willen hashen met het combinerend hashing partoon, dan zal als eerste de input aan elkaar geplakt worden. Daarna wordt er één hash value gecreëerd van de gecombineerde input. Een nadeel aan dit patroon is dat de hash value van de individuele inputs niet gekent is.\\*\\*Het sequentieel hashing patroon, Dit is een combinatie van de het herhaalde hashing patroon en het combinerende hashing patroon.De eerste input zal gehashed worden. Deze hash value zal gecombineerd worden met de volgende input, wat op zijn beurt weer een nieuwe hash value geeft. Zo zal dit proces blijven door gaan tot dit compleet is.\\*\\*Als laatste patroon bespreken we het hiërarchische hashing patroon ofwel een Merkle Tree genoemd. Dit patroon heeft een omgekeerde boom structuur. Stel dat je werkt met twee inputs, dan worden deze twee eerst apart gehashed en daar zullen deze twee hash values samen gehashed worden dankzij het combinerende patroon.
+\\*\\*\textbf{Een voorbeeld van hashing}~\autocite{blockchain1}\\*\\*
+\begin{center}
+	\includegraphics[width=10cm]{img/hashing}\\[1cm]
+\end{center}
+\textbf{Verschillende hash patronen}\\*\\*
+Het eerste en simpelste voorbeeld is onafhankelijk hashen. In dit partoon wordt van elke data individueel de hash value berekend.\\*\\*In het volgende voorbeeld bespreken we het herhaald hashen. In dit partoon wordt de input eerst gehashed, en daarna wordt de hash value nog eens gehashed. Dit is mogelijk omdat een hash value ook een vorm van data is en daarom kan dienen als input.\\*\\*Het volgende partoon gaat over combinerend hashen. Stel dat we 2 inputs willen hashen met het combinerend hashing partoon, dan zal als eerste de input aan elkaar geplakt worden. Daarna wordt er één hash value gecreëerd van de gecombineerde input. Een nadeel aan dit patroon is dat de hash value van de individuele inputs niet gekent is.\\*\\*Het sequentieel hashing patroon, Dit is een combinatie van de het herhaalde hashing patroon en het combinerende hashing patroon.De eerste input zal gehashed worden. Deze hash value zal gecombineerd worden met de volgende input, wat op zijn beurt weer een nieuwe hash value geeft. Zo zal dit proces blijven door gaan tot dit compleet is.\\*\\*Als laatste patroon bespreken we het hiërarchische hashing patroon ofwel een Merkle Tree genoemd dat te zien is in de onderstaande foto ~\autocite{blockchain1}. Dit patroon heeft een omgekeerde boom structuur. Stel dat je werkt met twee inputs, dan worden deze twee eerst apart gehashed en daar zullen deze twee hash values samen gehashed worden dankzij het combinerende patroon.\\*\\*
+\begin{center}
+	\includegraphics[width=9cm]{img/hashing2}\\[1cm]
+\end{center}
 \section{Cryptografie}
 \textbf{Symmetrische cryptografie}\\*\\*
 Bij symmetrische cryptografie bestaat er maar één sleutel voor het encrypteren en het decrypteren. Degene dat het bericht encrypteerde, dus het dus ook terug decrypteren. 
 \\*\\*\textbf{Asymmetrische cryptografie}\\*\\*
-Asymmetrische cryptografie zit een beetje ingewikkelder in elkaar. Hierbij heb je twee complementaire sleutels. Als een bericht met sleutel A wordt geëncrypteerd, kan dat alleen maar met sleutel B. Vandaar de privé sleutel en de publieke sleutel. De privé sleutel is alleen voor de eigenaar die het bericht verstuurd en de publieke sleutel wordt aan iedereen gegeven, zonder te weten of ze betrouwbaar zijn of niet. Merk op dat er dus een bericht kan geëncrypteerd worden met ofwel de privé sleutel of de publieke sleutel, beiden met een verschillende functie. Als een bericht met de privé sleutel geëncrypteerd wordt, kan je dit vergelijken met een broadcast bericht waar iedereen dit kan lezen, want iedereen heeft de publieke sleutel. Als eens bericht met de publieke sleutel geëncrypteerd wordt, dan kan je dit vergelijken met een soort brievenbus. Waar iedereen berichten kan sturen maar alleen de eigenaar ze kan decrypteren.
+Asymmetrische cryptografie zit een beetje ingewikkelder in elkaar. Hierbij heb je twee complementaire sleutels. Als een bericht met sleutel A wordt geëncrypteerd, kan dat alleen maar gedecrypteerd worden met sleutel B, zoals getoond in onderstaande foto ~\autocite{blockchain1}. Vandaar de privé sleutel en de publieke sleutel. De privé sleutel is alleen voor de eigenaar die het bericht verstuurd en de publieke sleutel wordt aan iedereen gegeven, zonder te weten of ze betrouwbaar zijn of niet. Merk op dat er dus een bericht kan geëncrypteerd worden met ofwel de privé sleutel of de publieke sleutel, beiden met een verschillende functie. Als een bericht met de privé sleutel geëncrypteerd wordt, kan je dit vergelijken met een broadcast bericht waar iedereen dit kan lezen, want iedereen heeft de publieke sleutel. Als eens bericht met de publieke sleutel geëncrypteerd wordt, dan kan je dit vergelijken met een soort brievenbus. Waar iedereen berichten kan sturen maar alleen de eigenaar ze kan decrypteren.\\*\\*
+\begin{center}
+	\includegraphics[width=10cm]{img/key}\\[1cm]
+\end{center}
 \section{Het opslaan van data}
 \textbf{De blockchain structuur}\\*\\*
 Er werd al eerder uitgelegd dat de structuur van een blockchain vergeleken kan worden met een ketting van blokken. Nu zullen we een beetje dieper ingaan op die structuur. Als er een blok wordt gemaakt met data in, dan wordt deze block gehashed, en deze hash wordt opgeslaan in de header van de volgende blok. Maar hoe ziet de data er precies uit in een blok? De data kan vergeleken worden met een boom structuur. In de kruik staan de transacties, deze worden allemaal gehashed. Daarna worden 2 hash values terug samen gehashed tot op het punt dat er maar 1 hash value aan de wortel van de boom staat. Deze laatste hash value wordt opgeslaan in de header, samen met de hash value van de vorige block.
 \\*\\*\textbf{Oude transacties proberen wijzigen}\\*\\*
-Daarom is de blockchain dus zo fraudebestendig, mdat alles sequentieel gehashed wordt en zelfs een kleine verandering aan de input een grote verandering kan brengen aan de hash value. Als er iemand de data van transactie 2 wil aanpassen, dan zal de hash value van R2 niet meer kloppen, met het gevolg dat de hash values van R12, B1 en B2 ook niet meer zullen kloppen. Hierdoor kan de fout heel snel opgespoort worden. Als iemand de informatie in een transactie wil veranderen, dan zal deze persoon elk hash value terug moeten veranderen en dit kost heel veel tijd en computerkracht.
+Daarom is de blockchain dus zo fraudebestendig, omdat alles sequentieel gehashed wordt en zelfs een kleine verandering aan de input een grote verandering kan brengen aan de hash value. Als er iemand de data van transactie 2 wil aanpassen, dan zal de hash value van R2 niet meer kloppen, met het gevolg dat de hash values van R12, B1 en B2 ook niet meer zullen kloppen, zoals getoond in onderstaande foto ~\autocite{blockchain1}. Hierdoor kan de fout heel snel opgespoort worden. Als iemand de informatie in een transactie wil veranderen, dan zal deze persoon elk hash value terug moeten veranderen en dit kost heel veel tijd en computerkracht.\\*\\*
+\begin{center}
+	\includegraphics[width=14cm]{img/change}\\[1cm]
+\end{center}
 
 \chapter{Supply Chain}
 Nu dat we waar bitcoin en blockchain voor staan, is het tijd om te kijken naar supply chain. Wat is een supply chain? Hoe werkt het? Wat loopt er zoal mis?
@@ -196,6 +208,25 @@ Bij een supply chain, hoort naturlijk ook een supply chain management systeem. D
 ~\autocite{scm1}
 
 \chapter{Problemen met supply chain}
+Om te weten welke problemen blockchain (niet) kan oplossen voor supply chain, moeten er eerst onderzocht worden welke problemen er precies bestaan. De problemen dat al eerder werden aangehaald in de stand van zaken worden hier kort nog besproken.
+
+\section{Oplossing?}
+
+\begin{enumerate}
+	\item \textbf{Globalizering}\\*
+		Bedrijven verhuizen bepaalde sectoren naar het buitenland, maar dit brengt meer complexiteit met zich mee. Als deze informatie van de verschillende grafische sectoren nu gecombineerd in één database zou komen, dan wordt dit proces al minder complex. En daar kan blockchain voor zorgen.
+	\item \textbf{Vraag en aanbod}\\*
+		Het is belangrijk voor de bedrijven dat ze zo snel mogelijk kunnen inspelen op de vraag en aanbod van de eindgebruiker. Via bv. ERP systemen waar de fysieke en digitate supply chain niet altijd gesyncroniseerd zijn, kan dit soms een probleem worden. Bij een blockchain waar er gefocust wordt op snelle transacties, kan deze synchronisatie zo goed als real time zijn.
+	\item \textbf{Voldoen aan de verwachtingen van de eindgebruiker}\\*
+		De eindgebruiker verwacht dat de producten dat gekocht worden, altijd van goeie kwaliteit zijn. Alhoewel blockchain hierop een indirecte relatie kan uitoefenen via het naar omlaag brengen van de kosten, is er geen directe relatie tussen het gebruik van blockchain en de kwaliteit van de producten.
+	\item \textbf{Veel papier werk}\\*
+		Dit is een punt dat zeker kan opgelost worden via blockchain. Omdat meerdere bedrijven dezelfde informatie moet invullen, is er meer plaats voor fouten te maken. Deze informatie is ook redundant omdat elk bedrijf dit zelf wil bijhouden omdat er geen vertrouwen is tussen de verschillende partijen. Dit is dus perfect voor blockchain, omdat blockchain het vertrouwensprobleem oplost. Documenten kunnen ook worden opgeslaan op de blockchain, zodat deze veel makkelijker toegankelijk zijn voor de correcte lezer ervan.
+	\item \textbf{Wat nu voor de lokale chinese boeren?}\\*
+		Omdat deze boeren nog hevig gecontroleerd, getakseerd en gemanipuleerd worden, is het moeilijk van in te stappen in blockchain. Deze boeren hebben meestal ook de middelen er niet voor. Blockchain kan voor hun ook niets veranderen aan de kwaliteit van de producten, de slechte wegen en het landschap. Terwijl het voor grotere bedrijven wel een mogelijkheid is.
+\end{enumerate}
+
+\section{Conclusie problemen}
+De vraag 'Welke problemen kunnen niet opgelost worden met blockchain?' kan nu al beantwoord worden met de met de informatie dat er tot nu toe al verzameld is in dit hoofdstuk. Terwijl blockchain redelijk wat problemen kan oplossen voor supply chain, zijn er ook een antal dat hier onderzocht werden, waar blockchain een mindere betekenis heeft. Blockchain kan op zich niet direct iets veranderen aan de kwaliteit van de producten, deze verantwoordelijkheid ligt nog altijd bij het bedrijf zelf. Ook is het moeilijk voor de lokale boeren dat niet de middelen hebben om te starten met de integratie met blockchain. Als er gekeken wordt naar China, zijn daar de omstandigheden ook heel moeilijk.
 
 \chapter{HyperLedger composer prototype}
 \section{Wat is hyperledger composer?}
@@ -221,19 +252,19 @@ Maar meestal is een supply chain netwerk niet gewoon 1 ketting, maar dan bestaat
 \section{Gebruikte technologieën}
 \textbf{HyperLedger Composer}
 
-Met behulp van de HyperLedger composer, is er een netwerk opgesteld van bedrijven en producten.
+Met behulp van de HyperLedger composer, is er een netwerk opgesteld van bedrijven en producten. De volgende 3 foto's beschijven de stappen van het starten van het netwerk.
 Hiervoor zijn een paar stappen nodig:
 
 \begin{enumerate}
 	\item Hyperledger fabric starten starten
 	\begin{center}
-		\includegraphics[width=13cm]{img/start-fabric}\\[1cm]
+		\includegraphics[width=8cm]{img/start-fabric}\\[1cm]
 	\end{center}
 	Om het netwerk te gebruiken en er moeten we het eerste starten met bovenstaande starten. In dit voorbeeld is hyperledger fabric al geïnstalleerd.\\*
 	\item Netwerk starten
 	\begin{center}
 		\includegraphics[width=13cm]{img/install-network}\\[1cm]
-		\includegraphics[width=13cm]{img/start-network}\\[1cm]
+		\includegraphics[width=14cm]{img/start-network}\\[1cm]
 	\end{center}
 	Bij het installeren en het starten van het netwerk worden gegevens meegegeven zoals de admin kaart, de bna file waar alles gecompesseerd instaat, de versie van het netwerk dat ingesteld wordt in de package.json...\\*
 	\item Composer rest server starten
@@ -261,7 +292,6 @@ Omdat het netwerk elk keer weer leeg is als het opnieuw wordt opgestart, moeten 
 
 Eerst zal er een connectie gemaakt moeten worden met het netwerk via de "composer-client":
 \begin{center}
-	\includegraphics[width=13cm]{img/composer-info}\\[1cm]
 	\includegraphics[width=13cm]{img/composer-start}\\[1cm]
 	\includegraphics[width=13cm]{img/composer-connect}\\[1cm]
 \end{center}
@@ -351,7 +381,7 @@ De vraag 'Hoe kan er met zekerheid gezegd worden dat de producten authentiek zij
 
 \chapter{Uitvoeren testen}
 \section{Schetsen van de situatie}
-Voor een bedrijf is de snelheid van het netwerk ook zeker een belangrijk aspect. Een bedrijf kan niet zitten wachten op transacties dat in queue staan om uitgevoerd te worden. Daarom worden er ook een paar snelheidstesten losgelaten op het netwerk. Dit netwerk werd opgesteld op een virtuele machine, de testen duren daarom dus ook langer dan normaal. Op volgende transacties wordt de snelheid getest:\\*\\*
+Voor een bedrijf is de snelheid van het netwerk ook zeker een belangrijk aspect. Een bedrijf kan niet zitten wachten op transacties dat in queue staan om uitgevoerd te worden. Daarom worden er ook een paar snelheidstesten losgelaten op het netwerk. Dit netwerk werd opgesteld op een virtuele machine, de testen duren daarom dus ook langer dan normaal. Op volgende transacties wordt de snelheid getest:\\*
 \begin{enumerate}
 	\item Creatie van informatie
 	\item Verwijderen van informatie
@@ -360,16 +390,13 @@ Voor een bedrijf is de snelheid van het netwerk ook zeker een belangrijk aspect.
 \end{enumerate}
 
 \section{Uitgevoerde testen}
-Elke test wordt 30 keer uitgevoerd...\\*
+Elke test wordt 30 keer uitgevoerd...\\*\\*
 \textbf{Creatie van informatie}
 
 Er worden twee verschillende testen uitgevoerd voor de creatie van de informatie. De gegevens kunnen in één lijst verstuurd worden om aan te maken op het netwerk of dit kan gegeven per gegeven verstuurd worden. Hier wordt getest of er een verschil bestaat tussen deze twee manieren. Er werd getest met 5, 50 en 100 producten. Er worden geen testen uitgevoerd met meer producten omdat er vanaf dan timeout errors worden gegeven.
 
 \begin{center}
 	\includegraphics[width=14cm]{img/test-function-createProductOnce}\\[1cm]
-\end{center}
-\begin{center}
-	\includegraphics[width=14cm]{img/test-function-createProductOnePerOne}\\[1cm]
 \end{center}
 
 \textbf{Verwijderen van informatie}
@@ -378,9 +405,6 @@ De volgende transactie dat getest zal worden is het verwijderen van alle informa
 
 \begin{center}
 	\includegraphics[width=14cm]{img/test-function-removeProductOnce}\\[1cm]
-\end{center}
-\begin{center}
-	\includegraphics[width=14cm]{img/test-function-removeProductOnePerOne}\\[1cm]
 \end{center}
 
 \textbf{Ophalen van alle producten / bedrijven}
@@ -447,10 +471,10 @@ Alle resultaten zijn uitgedrukt in seconden...
 		 Voor de ruwe resultaten, zie Bijlage B.\\*
 	
 		\begin{center}
-			\includegraphics[width=14cm]{img/test-column-4}\\[1cm]
+			\includegraphics[width=11cm]{img/test-column-4}\\[1cm]
 		\end{center}
 		\begin{center}
-			\includegraphics[width=14cm]{img/test-column-5}\\[1cm]
+			\includegraphics[width=11cm]{img/test-column-5}\\[1cm]
 		\end{center}
 		Wat heel merkwaardig is bij deze testen is dat het blijkt dat de producten met de hogere id's minder lang duren dan de producten met een klein id. Dit kan zijn omdat de lijst omgekeerd onderzocht wordt, maar hier werd niet meer informatie over gevonden.
 \end{enumerate}
