@@ -1,0 +1,17 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'vanhecke_wouter_voorstel.blg'
+[32] biber-MSWIN64:313> INFO - === 
+[114] Biber.pm:371> INFO - Reading 'vanhecke_wouter_voorstel.bcf'
+[202] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[216] Biber.pm:3981> INFO - Processing section 0
+[244] Biber.pm:4154> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[253] bibtex.pm:1479> INFO - LaTeX decoding ...
+[269] bibtex.pm:1305> INFO - Found BibTeX data source 'biblio.bib'
+[291] Utils.pm:169> WARN - year field 'Unknown' in entry 'art3' is not an integer - this will probably not sort properly.
+[311] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[311] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[311] Biber.pm:3809> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'nl-NL'
+[311] Biber.pm:3815> INFO - No sort tailoring available for locale 'nl-NL'
+[339] bbl.pm:617> INFO - Writing 'vanhecke_wouter_voorstel.bbl' with encoding 'UTF-8'
+[343] bbl.pm:720> INFO - Output to vanhecke_wouter_voorstel.bbl
+[347] Biber.pm:110> INFO - WARNINGS: 1

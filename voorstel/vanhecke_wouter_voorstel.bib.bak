@@ -1,0 +1,53 @@
+% Encoding: UTF-8
+
+@Article{art1,
+  author  = {antonylewis2015},
+  title   = {A gentle introduction to smart contracts},
+  journal = {Computers, Informatics, Nursing},
+  year    = {2016},
+  url     = {https://bitsonblocks.net/2016/02/01/a-gentle-introduction-to-smart-contracts/},
+}
+
+@Article{art2,
+  author = {BlockGeeks},
+  title  = {Smart Contracts: The Blockchain Technology That Will Replace Lawyers},
+  year   = {2016},
+  url    = {https://blockgeeks.com/guides/smart-contracts/},
+}
+
+@Article{art3,
+  author = {Alyssa Hertig},
+  title  = {How Do Ethereum Smart Contracts Work?},
+  year   = {Unknown},
+  url    = {https://www.coindesk.com/information/ethereum-smart-contracts-work/},
+}
+
+@Article{art4,
+  author = {Joost Bokhorst},
+  title  = {Smart contracts binnen de blockchain: contracteren 2.0?},
+  year   = {2016},
+  url    = {https://www.ordina.nl/nl-nl/blogs/2016/oktober/smart-contracts-binnen-de-blockchain-contracteren-20/},
+}
+
+@Article{art5,
+  author = {Josh Stark},
+  title  = {Making Sense of Blockchain Smart Contracts},
+  year   = {2016},
+  url    = {https://www.coindesk.com/making-sense-smart-contracts/},
+}
+
+@Article{art6,
+  author = {Gideon Greenspan},
+  title  = {Why Many Smart Contract Use Cases Are Simply Impossible},
+  year   = {2016},
+  url    = {https://www.coindesk.com/three-smart-contract-misconceptions/},
+}
+
+@MastersThesis{the1,
+  author = {Jonatan H. Bergquist},
+  title  = {Blockchain Technology and Smart Contracts},
+  school = {Uppsala University},
+  year   = {2017},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

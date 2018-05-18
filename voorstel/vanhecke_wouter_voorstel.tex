@@ -1,0 +1,140 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachelorproef
+%==============================================================================
+% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie voorstel.cls)
+% Auteur: Jens Buysse, Bert Van Vreckem
+
+% TODO: Compileren document:
+% 1) Vervang ‘naam_voornaam’ in de bestandsnaam door je eigen naam, bv.
+%    buysse_jens_voorstel.tex
+% 2) latexmk -pdf naam_voornaam_voorstel.tex
+% 3) biber naam_voornaam_voorstel
+% 4) latexmk -pdf naam_voornaam_voorstel.tex (1 keer)
+
+\documentclass[fleqn,10pt]{voorstel}
+
+%------------------------------------------------------------------------------
+% Metadata over het artikel
+%------------------------------------------------------------------------------
+
+\JournalInfo{HoGent Bedrijf en Organisatie} % Journal information
+\Archive{Bachelorproef voorstel 2017 - 2018} % Additional notes (e.g. copyright, DOI, review/research article)
+
+
+%---------- Titel & auteur ----------------------------------------------------
+
+% TODO: geef werktitel van je eigen voorstel op
+\PaperTitle{Veiligheid van data op de blockchain technologie en het gebruik van smart contracts}
+\PaperType{Onderzoeksvoorstel Bachelorproef} % Type document
+
+
+% TODO: vul je eigen naam in als auteur, geef ook je emailadres mee!
+\Authors{Wouter Van Hecke\textsuperscript{1}} % Authors
+\affiliation{\textbf{Contact:}
+  \textsuperscript{1} \href{mailto:wouter.vanhecke.w9895@student.hogent.be}{wouter.vanhecke.w9895@student.hogent.be}}
+
+%---------- Abstract ----------------------------------------------------------
+
+  \Abstract{Dit onderzoek gaat over de blockchain technologie en een concept dat de blockchain technologie met zich meebrengt: "smart contracts". Dit is een concept dat onze manier van omgaan met huidige contracten helemaal kan veranderen. Er zit veel potentieel in (de) blockchain technologie/smart contracts en is daarom ook belangrijk dat dit verder onderzocht wordt, zowel voor jonge programmeurs die zich verder willen verdiepen in smart contracts en voor geavanceerde programmeurs die de huidige problemen verder willen behandelen. In deze bachelorproef wordt onderzocht hoe de blockchain technologie zijn data beveiligd en hoe deze technologie kan toegepast worden in supply chain en voting systems. Het doel van deze bachelorproef is aan te tonen waarom een blockchain heel veilig is en hoe het in de praktijk gebruikt kan worden.
+}
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+% TODO: Sleutelwoorden:
+%
+% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
+% deze lijst:
+%
+% - Mobiele applicatieontwikkeling
+% - Webapplicatieontwikkeling
+% - Applicatieontwikkeling (andere)
+% - Systeem- en netwerkbeheer
+% - Mainframe
+% - E-business
+% - Databanken en big data
+% - Machine learning en kunstmatige intelligentie
+% - Andere (specifieer)
+%
+% De andere sleutelwoorden zijn vrij te kiezen
+
+\Keywords{Onderzoeksdomein. Blockchain --- Smart Contracts --- Ethereum} % Keywords
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+
+%---------- Titel, inhoud -----------------------------------------------------
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+%---------- Inleiding ---------------------------------------------------------
+
+\section{Introductie} % The \section*{} command stops section numbering
+\label{sec:introductie}
+
+Technologie blijft steeds evolueren. De blockchain technologie is daar een belangrijk voorbeeld van. Deze nieuwe technologie begint meer en meer bekend te worden, kijk maar naar de stijging in waarde van bitcoin het afgelopen jaar. Maar de blockchain technologie is zoveel meer dan alleen maar bitcoin en andere cryptocurrencies. Omdat een blockchain een gedecentraliseerd systeem is, is het van hoog belang om ervoor te zorgen dat data zo beveiligd mogelijk is om de integriteit van het systeem te behouden.
+Een ander concept dat blockchain met zich mee brengt zijn de "smart contracts".
+Een smart contract is een zelf uitvoerbaar script dat opgeslagen wordt op de blockchain. Hiermee kan je bijvoorbeeld programmeren dat persoon A op een bepaald tijdstip persoon B zal betalen, dit zal op dat exacte tijdstip dan automatisch uitgevoerd worden dankzij het smart contract. Omdat dit nog een relatief nieuwe technologie is, bestaat er nog veel verwarring rond dit concept. Daarom is het belangrijk dat deze technologie verder onderzocht wordt. Het doel van deze bachelorproef is aan te tonen waarom een blockchain heel veilig is en hoe het in de praktijk gebruikt kan worden. De hoofdvraag van deze bachelorproef wordt dus:\\*
+\textbf{Hoe wordt data op de blockchain beveiligd?} \\*
+Omdat de blockchain technologie een gedecentraliseerde technologie is, kan iedereen het netwerk binnentreden, ongeacht de intentie van de persoon. Daarom is het heel belangrijk dat alle data op de blockchain goed beveiligd wordt. Bij deze vraag wordt er onderzocht hoe de blockchain zijn data precies beveiligd en alleen maar de correcte informatie vrijgeeft aan de huidige eigenaar.\\*\\*
+Andere onderzoeksvragen bestaan uit: \\*
+\textbf{Hoe wordt de blockchain technologie gebruikt voor supply chain?}
+De blockchain technologie vindt bij meer en meer industrieën een thuis. Bij deze vraagt wordt er onderzocht hoe de blockchain technologie een thuis heeft gekregen bij supply chain.\\*\\*
+\textbf{Hoe kan de blockchain technologie gebruikt worden als een voting system?}
+Omdat elke gebruiker op de blockchain anoniem is, maar er tegelijkertijd ook geen kennis is over de betrouwbaarheid van de gebruiker, wordt er onderzocht hoe de blockchain toch gebruikt kan worden als een voting system en waarom dit toch een velige keuze kan zijn. \\*\\*
+\textbf{NEO en Ethereum zijn allebei platformen dat smart contracts ondersteunen, maar hoe verschillen ze van elkaar?} 
+Stel nu dat je een applicatie wil schrijven dat gebruik maakt van smart contracts en nu moet je kiezen op welke blockchain technologie je deze applicatie wil maken. In dit deel wordt er onderzocht wat de verschillen zijn tussen de blockchain platformen 'NEO' en 'Ethereum'.
+
+%---------- Stand van zaken ---------------------------------------------------
+
+\section{State-of-the-art}
+\label{sec:state-of-the-art}
+
+
+Er zijn al meerdere artikels en thesissen geschreven over smart contracts. Artikels hebben het vaak over wat een smart conctract nu eigenlijk is, terwijl andere bachelorproeven of thesissen al snel meer gedetailleerd ingaan op een specifieke toepassing met smart contracts.
+
+\subsection{A gentle introduction}
+Het eerste artikel \autocite{art1} geeft een kort, maar krachtige introductie over smart contracts. Het geeft een paar basis definities, samen met een paar praktische voorbeelden in verband met banken. Het geeft uitleg over wat een smart contract doet en hoe je het kan gebruiken. Ook vertelt de auteur over zijn visie van de toekomst voor smart contracts.
+
+\subsection{Impossible use cases}
+Het tweede artikel, geschreven door \textcite{art6}, vertelt meer over wat niet mogelijk is met smart contracts op dit moment. Het haalt drie use cases naar boven waar mensen veel over spreken en die op dit moment nog niet mogelijk zijn. Hij geeft een duidelijk, praktisch voorbeeld en bespreekt hoe je dit probleem kan omzeilen.
+
+\subsection{Smart contracts in de pharmacy wereld}
+In deze thesis, geschreven door \textcite{the1}, wordt het probleem met apothekers aangehaald. De auteur spreekt over hoe patiënten soms verkeerde medicatie voorgeschreven krijgen en daardoor nog zieker kunnen worden. Dit ligt in de handen van de dokter die de examinatie heeft afgelegd en hoe al het vertrouwen bij de dokter ligt. De dokter schrijft de medicatie op een prescriptie en zet hier een stempel op als validatie. De auteur heeft geprobeerd om dit om te zetten naar een smart contract dat werk met privacy en validatie.
+
+%---------- Methodologie ------------------------------------------------------
+\section{Methodologie}
+\label{sec:methodologie}
+
+De vragen zullen beantwoord worden aan de hand van literatuurstudies. Er zal onderzocht worden hoe de blockchain technologie zijn data beveiligd en hoe smart contract aspecten kunnen helpen zoals supply chain, voting, kostefficiëntie...
+
+%---------- Verwachte resultaten ----------------------------------------------
+\section{Verwachte resultaten}
+\label{sec:verwachte_resultaten}
+
+\textbf{Hoe wordt data op de blockchain beveiligd?} Voor deze onderzoeksvraag wordt verwacht dat de data op een blockchain zeer goed beveiligd wordt dankzij encryptie. Het vervalsen van gegevens zal onmogelijk zijn voor mensen met valse intenties omdat de blockchain technologie werkt met een gedecentraliseerd systeem waar je alleen maar gegevens aan kan toevoegen en niet verwijderen/aanpassen.\\*\\*
+\textbf{Hoe wordt de blockchain technologie gebruikt voor supply chain?} Voor deze onderzoeksvraag wordt verwacht dat producten succesvol op de blockchain kunnen worden opgeslaan en zorgt voor authenticiteit van producten.\\*\\*
+\textbf{Hoe kan de blockchain technologie gebruikt worden als een voting system?} Omdat de blockchain technologie zorgt voor een systeem waar annonimiteit en vertrouwloos vertrouwen topprioriteiten zijn, kan een blockchain technologie als een voting system gebruikt worden. Omdat een blockchain werkt met hash values en een gelinkte list waar constant de hash value van de vorige block wordt opgeslagen, kan vervalsing niet voorkomen, omdat de hash values dan niet meer overeenkomen.\\*\\*
+\textbf{NEO en Ethereum zijn allebei platformen dat smart contracts ondersteunen, maar hoe verschillen ze van elkaar?} Om deze vraag te beantwoorden zullen de twee platformen naast elkaar gelegd worden en vergeleken worden op aspecten zoals kosten, transactievermogen, snelheid, gebruikte programmeertaal, toegankelijkheid.
+
+%---------- Verwachte conclusies ----------------------------------------------
+\section{Verwachte conclusies}
+\label{sec:verwachte_conclusies}
+
+Uit de onderzoeken zal blijken dat er nog veel groeipotentieel is voor blockchain technologieën. Smart contracts zullen in de toekomst als standaard gebruikt worden voor contracten omdat er veel minder logische fouten gemaakt kunnen worden tijdens het uitvoeren van het contract. Blockchain technologie kan opgenomen worden binnen zowel kleine als grote bedrijven. Door het gebruik van blockchain te standaardiseren zal er veel geld bespaard worden op vlak van onkosten / het betalen van derde partijen, omdat hun werk nu geautomatiseerd kan worden.  
+
+%------------------------------------------------------------------------------
+% Referentielijst
+% TODO: de gerefereerde werken moeten in BibTeX-bestand ``biblio.bib''
+% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+% BibLaTeX mode)
+
+\phantomsection
+\nocite{*}
+\printbibliography[heading=bibintoc]
+\end{document}

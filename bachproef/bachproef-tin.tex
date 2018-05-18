@@ -1,0 +1,500 @@
+%%=============================================================================
+%% LaTeX sjabloon voor bachelorproef, HoGent Bedrijf en Organisatie
+%% Opleiding Toegepaste Informatica
+%%=============================================================================
+
+\documentclass[fleqn,a4paper,12pt]{book}
+
+\input{structure}
+
+%%---------- Documenteigenschappen --------------------------------------------
+%% TODO: Vul dit aan met je eigen info:
+
+% Je eigen naam
+\newcommand{\student}{Wouter Van Hecke}
+
+% De naam van je promotor (lector van de opleiding)
+\newcommand{\promotor}{Angeline Van Achter}
+
+% De naam van je co-promotor. Als je promotor ook je opdrachtgever is en je
+% dus ook inhoudelijk begeleidt (en enkel dan!), mag je dit leeg laten.
+\newcommand{\copromotor}{Hadrien Van Durme}
+
+% Indien je bachelorproef in opdracht van/in samenwerking met een bedrijf of
+% externe organisatie geschreven is, geef je hier de naam. Zoniet laat je dit
+% zoals het is.
+\newcommand{\instelling}{Hogeschool Gent}
+
+% De titel van het rapport/bachelorproef
+\newcommand{\titel}{Hoe kan de blockchain technologie de problemen oplossen in verband met supply chain in de agricultuur?}
+
+% Datum van indienen (gebruik telkens de deadline, ook al geef je eerder af)
+\newcommand{\datum}{28 mei 2018}
+
+% Academiejaar
+\newcommand{\academiejaar}{2017-2018}
+
+% Examenperiode
+%  - 1e semester = 1e examenperiode => 1
+%  - 2e semester = 2e examenperiode => 2
+%  - tweede zit  = 3e examenperiode => 3
+\newcommand{\examenperiode}{2}
+
+%%=============================================================================
+%% Inhoud document
+%%=============================================================================
+
+\begin{document}
+
+%---------- Taalselectie ------------------------------------------------------
+% Als je je bachelorproef in het Engels schrijft, haal dan onderstaande regel
+% uit commentaar. Let op: de tekst op de voorkaft blijft in het Nederlands, en
+% dat is ook de bedoeling!
+
+%\selectlanguage{english}
+
+%---------- Titelblad ---------------------------------------------------------
+\inserttitlepage
+
+%---------- Samenvatting, voorwoord -------------------------------------------
+\usechapterimagefalse
+\input{voorwoord}
+\input{samenvatting}
+
+%---------- Inhoudstafel ------------------------------------------------------
+\pagestyle{empty} % No headers
+\tableofcontents % Print the table of contents itself
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+\pagestyle{fancy} % Print headers again
+
+%---------- Lijst figuren, afkortingen, ... -----------------------------------
+
+% Indien gewenst kan je hier een lijst van figuren/tabellen opgeven. Geef in
+% dat geval je figuren/tabellen altijd een korte beschrijving:
+%
+%  \caption[korte beschrijving]{uitgebreide beschrijving}
+
+%\listoffigures
+%\listoftables
+
+% Als je een lijst van afkortingen of termen wil toevoegen, dan hoort die
+% hier thuis. Gebruik bijvoorbeeld de ``glossaries'' package.
+% https://www.sharelatex.com/learn/Glossaries
+
+%%---------- Kern -------------------------------------------------------------
+
+\input{inleiding}
+\input{standvanzaken}
+\input{methodologie}
+
+% Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
+% vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
+% elke fase in je onderzoek in een apart hoofdstuk bespreken.
+
+%\input{...}
+%\input{...}
+%...
+\chapter{Bitcoin}
+Voordat we beginnen met de hoofdzaken, is het belangrijk dat we eerst de terminologie rond blockchain goed snappen. Vandaar deze intro over Bitcoin en blockchain.
+
+%%De oorsprong van Bitcoin
+\section{De historiek van Bitcoin}
+Het onstaan van Bitcoin gaat helemaal terug tot in 2008, toen een mysterieuze persoon genaamd Satoshi Nakamoto een paper ~\autocite{bit1} uitbracht onder de titel: "Bitcoin, a peer to peer electronic cash system".Wie deze persoon precies is, is tot op deze dag nog altijd niet gekend. Satoshi Nakamoto is in 2011 van het internet verdwenen.\\*\\*In het jaar 2009 werd voor het eerst het gedecentraliseerde Bitcoin system publiek gemaakt. Dit hield in dat mensen bitcoins konden minen - een wiskundig proces waarbij nieuwe bitcoins worden gecreeërd - als ook transacties versturen en verifiëren op de Bitcoin blockchain. Meer over blockchain in het volgende hoofdstuk.\\*\\* In het jaar 2010 kreeg een bitcoin voor de eerste keer een waarde, er werden maar liefst 10 000 bitcoins ingewisseld voor 2 pizza's. Op het moment van het schrijven van deze bachelorproef, zou dat een waarde hebben van 60 miljoen euro. Dit lijkt nu een belachelijk groot bedrag, maar dit moment was ook heel memorabel in de geschiedenis van bitcoin. Het was de allereerste keer dat er een echt product werd gekocht en dus dat bitcoin voor de eerste keer als een echt betaalmiddel gebruikt werkt. \\*\\*Er werd meer en meer interesse getoond in deze gedecentraliseerde technologie, er kwamen nieuwe projecten boven water met het doel om de Bitcoin blockchain te verbeteren. Deze projecten hebben ook hun eigen coin of token, een paar bekende voorbeelden zijn: de Ethereum blockchain met hun coin genaamd Ether, de Ripple blockchain met hun coin genaamd XRP. Er zijn in totaal meer dan 1000 van deze coins, meestal worden ze onder een overkoepelende term gezet, namelijk altcoins.\\*\\*Een blockchain draait vooral rond het decentraliseren van centrale systemen en het oplossen van het vertrouwensprobleem tussen verschillende partijen. Op dit punt in tijd stond de beveiliging nog niet helemaal op peil en bestaan er nog altijd kwetsbaarheden in het netwerk. Omdat bitcoin op dat moment redelijk nieuw was en een digitale waarde voorstelde, was dit ook een doelwit voor hackers. In het jaar 2014 gaat de bekende site Mt. Gox offline nadat ze gehacked waren en er maar liefst 850,000 bitcoins gestolen werden, wat nu een waarde zou hebben van maar liefst 5.1 miljard euro.\\*\\*Maar zelfs dat hield Bitcoin niet tegen, over de jaren heeft het als maar meer en meer aandacht gekregen en is de waarde blijven stijgen. In het jaar 2016 kwam er een nieuw concept genaamd ICO's of wel "Initial coin offering", ook vergelijkbaar met crowdfuncing of "IPO". Start up bedrijven konden op deze manier hun initieel bedrag verkrijgen en de mensen die hun geld gaven coins in de plaats geven. Die coins hebben op zich ook een waarde dat kan zakken of stijgen.\\*\\*Tot op de dag van vandaag is bitcoin blijven stijgen in waarde tot op een hoogtepunt van 18 000 euro.
+~\autocite{hist1}
+
+%%Voor- en nadelen van bitcoin
+\section{Voor- en nadelen van bitcoin}
+Sommige aspecten van Bitcoin kunnen zowel als positief als negatief aanzien worden. voorbeelden hiervan zijn: transactiesnelheid, privacy, controle...
+\\*\\*
+\textbf{Voordelen}\\*\\*
+Omdat er geen centrale autoriteit is op een blockchain ben je onafhankelijk van banken of de overheid. Bitcoin is een globale munt waar je dus overal met kan betalen.\\*Het verwerkingsproces van het verzenden op de Bitcoin blockchain is in vergelijking met het huidige banken systeem veel sneller. Als je een transactie wil uitvoeren bij een bank, kan dit gemakkelijk 3 dagen duren. Bij Bitcoin zal dit ongeveer gebeuren in 1 uur. Er zijn al projecten zoals Ripple of NEO waar de transactieduur verminderd werd tot een paar seconden/minuten.\\*Omdat je altijd in het bezit bent van je eigen coins, heb je zelf de complete controle, indien je de coins veilig houdt in een wallet. Niemand kan aan deze coins behalve de persoon die in het bezit is van de privé sleutel. Meer informatie over wallets in het volgende hoofdstuk.\\*Als er transacties gebeuren op een blockchain weet niemand wie je bent, wat ze wel kunnen zien is bijvoorbeeld van welk adres de bitcoins komen en naar welk ander adres ze verstuurd wordt. Er werd dus een pseudo-anonimiteit op de blockchain ontwikkeld waar niemand uw identiteit precies kent.
+\\*\\*\textbf{Nadelen}\\*\\*
+Aan bijna elk voordeel zit er ook een nadeel.\\*Omdat er altijd maar meer en meer mensen het Bitcoin netwerk toetreden, wordt het alsmaar duurder en langer voor een transactie uit te voeren, meer uitleg over blockchain transacties in het hoofdstuk van Blockchain.\\*Omdats sommige blockchains volledig anoniem zijn, is het veel makkelijker om deze coins te gebruiken voor het aankopen van drugs en wapens op de zwarte markt, omdat je veel moeilijker op te sporen bent.\\* Er is geen centraal controlepunt door een overheid bijvoorbeeld, maar dat wil niet zeggen dat ze zich er niet met bemoeien. In vele landen wordt er al gesproken over het invoeren van belastingen op de winst dat je krijgt als je belegd in coins. Ze zullen dit ook proberen reguleren, wat dus eigenlijk het overgestelde is van wat een blockchain wil zijn.\\*Volledige controle over je eigen geld is natuurlijk heel goed, maar wat gebeurt er als er iets fout gaat? Je staat er helemaal alleen voor want er is niemand waar je naar toe kunt voor hulp. Je moet dus altijd heel voorzichtig zijn met wat je doet met je geld.  
+~\autocite{voor1}
+
+\section{Wallets}
+Als je in het bezit wil zijn van je eigen coins, zal je deze moeten opslaan in je eigen wallet. Er zijn er paar verschillende wallets zoals een "cold storage wallet", een 'paper wallet' of een "web wallet". Bij het aanmaken van een nieuwe wallet krijg je 3 belangrijke gegevens: een adres, een publieke sleutel en een private sleutel. Met je private sleutel krijg je toegang tot je geld terwijl je publieke sleutel openlijk bekend staat op de blockchain. Meer informatie over beide sleutels in de blockchain hoofdstuk.\\* Elke wallet heeft zijn eigen adres, dat gebruikt wordt en geld naar overzetten. Stel dat persoon A 5 bitcoins naar persoon B wil sturen, dan zal persoon A dit naar het adres van persoon B sturen.\\*\\*Er bestaan een paar verschillende wallets die hier kort besproken zullen worden:\\*\\*
+\textbf{Online web wallet}\\*\\*
+Een voorbeeld van een 'web wallet' is MetaMask. Dit is een wallet dat je kan openen in een webbrowser.
+\\*\\*\textbf{Software wallet}\\*\\*
+Een software wallet is een wallet dat je zal draaien op je eigen computer en zo je coins kan beheren. Een voorbeeld van een software wallet is Exodus.
+\\*\\*\textbf{Hardware wallet}\\*\\*
+Een hardware wallet kan je vergelijken met een usb stick, speciaal geprogrammeerd als wallet. Het voordeel van een hardware wallet is dat je private sleutel nooit het apparaat verlaat en dus ook niet met het internet verbonden is tot zo lang dat je er niet zelf met connecteert. Een hardware wallet is de aangeraden optie voor mensen dat al een groter bedrag hebben.
+\\*\\*\textbf{Paper wallet}\\*\\*
+Met een 'paper wallet' zal je de publieke en private sleutel afdrukken om een papier en zo bijhouden. Dit stukje papier is dan de enige toegang dat je hebt tot je geld.
+~\autocite{wallet1}
+\section{Anoniemiteit}
+Op een blockchain blijft een persoon normaal pseudo-anoniem tot dat deze persoon onderheven wordt aan het proces van "Know your customer". Er zijn wel blockchains waar een persoon helemaal anoniem kan zijn, bv op de blockchain van Monero. Op sommige exchange site of uitwisselingsite moeten mensen hun gegevens invullen voordat ze cryptocurrency kunnen kopen. Dit is een website waar je verschillende coins kan kopen en verkopen. Maar voordat je dat kan doen, moet je eerst geregistreerd staan op hun database. De coins die op de exchange staan, heb je dus zelf niet in eigen bezit, maar ze zijn wel in het bezit van de exchange, omdat deze exchange in het bezit is van de privé sleutel van de persoon in kwestie.
+
+%%De derde partij
+\section{De derde partij}
+Een van de zaken dat een blockchain kan doen is de man in het midden wegwerken. Het grootste voorbeeld is nu een bank. De mogelijk om geld snel en goedkoop naar iemand te versturen zonder dat je moet rekenen op een bank is gigantisch. Omdat een blockchain een peer to peer systeem is, bestaat er een connectie van persoon A naar persoon B zodat er geen tussen persoon nodig is.
+
+\chapter{De blockchain technologie}
+~\autocite{blockchain1}
+
+\section{Wat is blockchain?}
+\textbf{Verschil gecentraliseerd / gedecentraliseerd netwerk}\\*\\*
+Bij het maken van een software systeem, kom je voor de keuze te staan over de architectuur van het netwerk, dit kan zowel centraal als decentraal. Deze twee zijn de belangrijkste architecturen. Bij een centraal netwerk zal er altijd een centraal component aanwezig zijn waar al het verkeer naartoe lijdt. Dit maakt het ook een makkelijk doelwit voor hackers. Als het lukt om het centrale punt neer te halen, ligt heel het netwerk plat. In vergelijking met een gedecentraliseerd netwerk waar er geen centreel punt is, het netwerk blijft runnen ookal wordt er 1 component (of node) uit het systeem wordt gehaald. In een gedecentraliseerd systeem is elke node indirect met elkaar verbonden, dat wil niet zeggen dat elke node met elk andere node verbonden zal zijn, maar via via er wel een connectie met heeft.\\* \\*
+
+Dit zijn de voordelen van een blockchain:\\*\\*
+Het grootste voordeel van een blockchain is het oplossen van het vertrouwensprobleem. Partijen vertrouwen elkaar meestal niet, er komt nog een derde partij tussen dat de twee andere partijen wel vertrouwen dat alles vertrouwbaar verloopt. Deze derde partij vraag hier ook geld voor. Een blockchain zorgt ervoor dat deze derde partij niet meer nodig is door de manier hoe een blockchain systeem wordt opgesteld.\\*
+In vergelijking met een centraal systeem, waar de kracht meestal uit een (super) computer wordt gehaald, wordt de kracht in een gedecentraliseerd systeem gehaald uit de combinatie van alle nodes in het netwerk. Hierdoor is de rekenkracht meestal veel groter.\\*\\*Alhoewel de initiële kost voor het opzetten van de gedecentraliseerd systeem hoger ligt dan bij een gecentraliseerd systeem, op langer termijn zal je nog altijd veel kosten bespraren omdat het veel duurder is om een (super / centrale) computer te beheren en onderhouden. Het is ook veel makkelijker om in een gedecentraliseerd systeem een computer te vervangen.\\*\\*Als er in een gedecentraliseerd netwerk één van de computers crasht, heeft dit weinig gevolgen op het volledige netwerk.\\*\\*Door het toevoegen van meer computers in het netwerk, verhoog je de rekenkracht van het hele netwerk. Daarom is er een natuurlijk vermogen om het netwerk uit te breiden. Hierdoor zijn er wel meer ingangen tot inbraak in het netwerk.\\*\\*
+
+Natuurlijk heeft een gedecentraliseerd systeem ook zijn nadelen:\\*\\*In een gedecentraliseerd netwerk is er geen coördinatie door een centraal punt, daarom moet er rekenkracht opzij gehouden worden zodat elke node dit zelf kan doen. Niet zomaar elke node is goed genoeg voor het netwerk, zo moet een node voldoen aan een minium specificatie om zich te kunnen voorstellen als een node van het netwerk.\\*\\*Coördinatie vereist communicatie, dit moeten de nodes ook zelf doen.\\*\\*Een geschreven software voor op een gedecentraliseerd systeem moet nog een paar extra taken vervullen. Namelijk de nadelen dat hierboven beschreven staan. Hierdoor worden de programma's veel complexer omdat natuurlijk alle nodes over een en dezelfde informatie moet beschikken.\\*\\*In een publieke blockchain kan iedereen toetreden, hierdoor is er niet geweten of elke node te betrouwen in. Deze onbetrouwbare node zouden verkregen informatie kunnen vervalsen en terug doorsturen. Hierdoor zal er dus een stevige beveiliging aanwezig moeten zijn in het programma. In vergelijking met een private blockchain waar de node moet toegelaten worden door fundament dat de private blockchain heeft opgericht.
+
+\textbf{Integriteit, een heel belangrijk aspect van een blockchain}\\*\\*
+Integriteit. Voor een blockchain staat integriteit op nummer 1. Een blockchain kan aanzien worden als een instrument voor het bekomen en onderhouden van de integriteit van een decentraliseerd systeem. Maar wat bedoeld men nu precies?\\*Het is een heel belangrijk niet-functioneel aspect van een software programma, de gebruikte data moet correct en volledig zijn, het programma moet op een correcte manier werken / niet vast lopen en de gegevens mogen altijd maar toegankelijk zijn voor de mensen dat daadwerkelijk toegang hebben. Als deze waarden geschonden worden, kan dit grote gevolgen hebben voor de gebruikers. Een voorbeeld is bij het vast lopen van een excel bestand terwijl er niet opgeslagen werd. De programmeurs doen er alles aan om dit zoveel mogelijk te verkomen en moest het wel gebeuren, ten minste de data veilig te stellen. Zodra er data wordt weggeschreven naar ee blockchain, staat dit er voor altijd op. Stel dat er een programma wordt opgezet en hier zitten fouten in. Dan staat dit ook fout op de blockchain en kan dit niet meer angepast worden.\\*\\*
+\textbf{Hoe ziet een blockchain er nu eigenlijk uit?}\\*\\*
+Je kan een blockchain letterlijk zien als een ketting van blokken. In elke blok zitten de gegevens van alle transacties die in het verleden tot op het heden al gebeurd zijn. Deze gegevens zijn niet te vervalsen dankzij het gebruik van hash-functies, meer daarover in één van de volgende hoofdstukken. Elke node in het netwerk probeert de eerste te zijn dat een nieuwe block kan maken, vanaf er iemand een blok gemaakt, moeten al de andere nodes stoppen met hun blok en de gemaakte blok verifiëren op correctheid. Als deze blok inderdaad correct is, nemen ze deze op in hun geschiedenis en proberen ze terug de volgende block te creëren of met andere woorden "minen".
+
+\textbf{Terminologie van een blockchain?}\\*\\*
+Een blockchain kan gezien worden als een data structuur. Het is een manier van data te organiseren. De data wordt opgeslaan in een blok en elke blok wordt met elkaar geconnecteerd. De ordering waarin dit gebeurt is van groot belang. Stel dat er bitcoin uitgewisseld worden over 4 adressen, dan wil je de juiste volgorde weten van welk adres het kwam en naar waar het gaat, en zeer belangrijk, wie dus de eigenaar is.\\*Een blockchain kan ook gezien worden als een algoritme, het gaat hem hier dan over de sequentie van instructies dat er op het netwerk gebeurt in verband met creëren van een blok, verifiëren van een blok, de juiste historiek kiezen...\\*De blockchain technologie wordt anderzijds ook aanzien als een soort van overkoepelende mantel van verschillende zaken, zoals de combinatie van de data structuur, het algoritme, maar zowel van cryptografie dat instaat voor eigendom op de blockchain en de beveiliging voor op het gedecentraliseerde netwerk.
+
+\section{Eigendom / Identicatie / Authenticatie / Authorisatie}
+Een kernbegrip van een blockchain gaat over de eigendom. Weten wie de eigenaar is en van wat de persoon de eigenaar is. Maar hoe wordt er nu bepaald wie een eigenaar is. Stel dat deze informatie zich bevindt op één plaats, dan hebt je één punt dat je moet vertrouwen. Dit doet een blockchain anders. Op een blockchain wordt deze informatie op meerdere plaatsen opgeslaan en wordt er dus gekeken naar de wet van meederheid. Stel dat er acht van de tien nodes zeggen dat transactie A correct is en de andere twee nodes zeggen dat transactie A niet correct is, dan is er meer kans de transactie A inderdaad klopt. Dit concept is te vergelijken met een rechtbank, waar er meerdere mensen een beslissing moeten maken in plaats van één.
+\\*\\*\textbf{Het kunnen bewijzen van de eigendom}\\*\\*
+Het bewijzen van activieten van een persoon gebeurt via een signature. Elke persoon heeft een privé sleutel en een publieke sleutel. Als deze persoon een bericht of transactie encrypteert met zijn privé sleuten, is dit bericht alleen maar decrypteerbaar met de publieke sleutel van die persoon. Zo weet men met zekerheid dat de persoon in kwestie daadwerkelijk het bericht heeft gestuurd. Hierover meer bij het gedeelte van cryptografie.
+\\*\\*\textbf{Identicatie / Authenticatie / Authorisatie}\\*\\*
+Identificatie betekent het beweren van wie je bent. Bijvoorbeeld zeggen dat Jan noemt. Hier komt er nog niets te pas van hoe je dit gaat bewijzen.
+\\*Authenticatie betekent het bewijzen van wie je bent. Bijvoorbeeld je rijbewijs voorleggen.
+\\*Authorisatie betekent het toegang krijgen tot iets waar je voor moest bewijzen dat je daadwerkelijk toegang had. Bijvoorbeeld een persoon dat 18+ moet zijn om te mogen rijden. Dit kunnen we ook reflecteren naar de blockchain technologie. Op een blockchain is iedereen uniek, ze worden gescheiden van elkaar, niet door een naam, maar wel door een privé sleutel. Meer over private sleutels later. Het authenticatie gedeelte op de blockchain wordt afgehandeld met behulp van "two-way hashing". Dit is een combinatie van je privé sleutel, je publieke sleutel en hash-functies. Meer hierover in het deel over hashing.\\*\\*
+Integriteit op een blockchain heeft dus onder andere te maken over echte uitspraken over eigendommen.
+\section{'Double spend' probleem}
+Een van de meest schendende voorbeelden van de integriteit is het 'Spending money twice' probleem.
+\\*\\*\textbf{Wat is het probleem?}\\*\\*
+De informatie over de eigendom staat op elke node in het netwerk opgeslaan. Als er één verandering gebeurt van deze informatie, moeten alle andere nodes dit ook weten. Maar dit neemt natuurlijk tijd in, dus zal de blockchain in een status komen waarvoor er nodes zijn die de nieuwe informatie al kennen wanneer dat nog niet zo is bij andere nodes. Dit zou gemanipuleerd kunnen worden door de eigenaar van bijvoorbeeld een auto. Stel nu dat de eigenaar van een auto 'persoon A', zijn auto wil verkopen aan 'persoon B' en dus de eigendom doorgeven. Vanaf deze auto doorgegeven wordt en de nodes bezig zijn met het aanpassen van hun informatie, kan 'persoon A' naar een andere node gaan waar de informatie nog niet is toegekomen en daar de auto verkopen aan 'persoon C'. Dit is het probleem dat wordt gezien als het 'spending money twice' probleem.
+\\*\\*\textbf{Hoe wordt dat probleem opgelost?}\\*\\*
+Om dit probleem op te lossen wordt dus de technologie van de blockchain gebruikt. Dit zal duidelijker worden aan de hand van volgende deelhoofdstukken.
+\section{Hashing}
+Op een blockchain krijg je te maken met heel veel data, deze data moet je op een snelle en efficiënte manier uniek maken en kunnen vergelijken. Vandaar dat er hier hashing wordt toegepast. Hash functies zijn kleine programma's dat eender welke data als input krijgt en die data verandert in een combinatie van hexadecimale getallen.
+\\*\\*\textbf{Aspecten van cryptografische hash functies}\\*\\*
+Bij het gebruik van cryptografische hash functies, zijn de hash values altijd uniek. Identieke input zal altijd een identieke hash value geven.\\*De output is pseudorandom, dat betekent dat de output van een bijna identieke input, veel verschil kan hebben.\\*Een hashing functie is een 'one-way functie', dat betekent dat je bijna onmogelijk van de output terug naar de input kan gaan.\\*Er zijn miljoenen verschillende combinatie van hash values, dus de kans dat er twee keer dezelfde hash value wordt gevonden voor een identieke input is immens klein.
+\\*\\*\textbf{Een voorbeeld van hashing}\\*\\*
+\\*\\*\textbf{Verschillende hash patronen}\\*\\*
+Het eerste en simpelste voorbeeld is onafhankelijk hashen. In dit partoon wordt van elke data individueel de hash value berekend.\\*\\*In het volgende voorbeeld bespreken we het herhaald hashen. In dit partoon wordt de input eerst gehashed, en daarna wordt de hash value nog eens gehashed. Dit is mogelijk omdat een hash value ook een vorm van data is en daarom kan dienen als input.\\*\\*Het volgende partoon gaat over combinerend hashen. Stel dat we 2 inputs willen hashen met het combinerend hashing partoon, dan zal als eerste de input aan elkaar geplakt worden. Daarna wordt er één hash value gecreëerd van de gecombineerde input. Een nadeel aan dit patroon is dat de hash value van de individuele inputs niet gekent is.\\*\\*Het sequentieel hashing patroon, Dit is een combinatie van de het herhaalde hashing patroon en het combinerende hashing patroon.De eerste input zal gehashed worden. Deze hash value zal gecombineerd worden met de volgende input, wat op zijn beurt weer een nieuwe hash value geeft. Zo zal dit proces blijven door gaan tot dit compleet is.\\*\\*Als laatste patroon bespreken we het hiërarchische hashing patroon ofwel een Merkle Tree genoemd. Dit patroon heeft een omgekeerde boom structuur. Stel dat je werkt met twee inputs, dan worden deze twee eerst apart gehashed en daar zullen deze twee hash values samen gehashed worden dankzij het combinerende patroon.
+\section{Cryptografie}
+\textbf{Symmetrische cryptografie}\\*\\*
+Bij symmetrische cryptografie bestaat er maar één sleutel voor het encrypteren en het decrypteren. Degene dat het bericht encrypteerde, dus het dus ook terug decrypteren. 
+\\*\\*\textbf{Asymmetrische cryptografie}\\*\\*
+Asymmetrische cryptografie zit een beetje ingewikkelder in elkaar. Hierbij heb je twee complementaire sleutels. Als een bericht met sleutel A wordt geëncrypteerd, kan dat alleen maar met sleutel B. Vandaar de privé sleutel en de publieke sleutel. De privé sleutel is alleen voor de eigenaar die het bericht verstuurd en de publieke sleutel wordt aan iedereen gegeven, zonder te weten of ze betrouwbaar zijn of niet. Merk op dat er dus een bericht kan geëncrypteerd worden met ofwel de privé sleutel of de publieke sleutel, beiden met een verschillende functie. Als een bericht met de privé sleutel geëncrypteerd wordt, kan je dit vergelijken met een broadcast bericht waar iedereen dit kan lezen, want iedereen heeft de publieke sleutel. Als eens bericht met de publieke sleutel geëncrypteerd wordt, dan kan je dit vergelijken met een soort brievenbus. Waar iedereen berichten kan sturen maar alleen de eigenaar ze kan decrypteren.
+\section{Het opslaan van data}
+\textbf{De blockchain structuur}\\*\\*
+Er werd al eerder uitgelegd dat de structuur van een blockchain vergeleken kan worden met een ketting van blokken. Nu zullen we een beetje dieper ingaan op die structuur. Als er een blok wordt gemaakt met data in, dan wordt deze block gehashed, en deze hash wordt opgeslaan in de header van de volgende blok. Maar hoe ziet de data er precies uit in een blok? De data kan vergeleken worden met een boom structuur. In de kruik staan de transacties, deze worden allemaal gehashed. Daarna worden 2 hash values terug samen gehashed tot op het punt dat er maar 1 hash value aan de wortel van de boom staat. Deze laatste hash value wordt opgeslaan in de header, samen met de hash value van de vorige block.
+\\*\\*\textbf{Oude transacties proberen wijzigen}\\*\\*
+Daarom is de blockchain dus zo fraudebestendig, mdat alles sequentieel gehashed wordt en zelfs een kleine verandering aan de input een grote verandering kan brengen aan de hash value. Als er iemand de data van transactie 2 wil aanpassen, dan zal de hash value van R2 niet meer kloppen, met het gevolg dat de hash values van R12, B1 en B2 ook niet meer zullen kloppen. Hierdoor kan de fout heel snel opgespoort worden. Als iemand de informatie in een transactie wil veranderen, dan zal deze persoon elk hash value terug moeten veranderen en dit kost heel veel tijd en computerkracht.
+
+\chapter{Supply Chain}
+Nu dat we waar bitcoin en blockchain voor staan, is het tijd om te kijken naar supply chain. Wat is een supply chain? Hoe werkt het? Wat loopt er zoal mis?
+
+\section{Wat is een supply chain?}
+Een supply chain stelt het fysieke netwerk voor tussen de bedrijven, de leveranciers en de retailers. Het stelt alle stappen voor dat een product ondergaat van begin tot einde. Dit gaat over hoe/waar het product begon als 
+rauw material, het transport naar de fabrieken, het proces van de rauwe materialen in de fabriek, distributie over de wereld, transport naar de winkels en zo uiteindelijk naar de klant. Het stelt het hele proces voor.\\*\\* In een supply chain zijn er een paar flows: information flow, product flow, money flow. Information flow vloeit door heen het hele netwerk, van een naar andere peers. Product flow vloeit van de maker naar de eindklant. Money flow vloeit van de eindklant terug naar de maker.\\*\\*Het aspect van betrouwbaarheid binnen een supply chain is heel belangrijk. Er is noodzaak aan vertrouwen van de leveranciers, zodat er geweten is dat je kan rekenen op kwaliteitsvolle producten dat ook optijd geleverd zullen worden. Natuurlijk hebben leveranciers soms ook hun eigen leveranciers, zo worden er al snel meerdere netwerken betrokken bij het op tijd zijn van het proces. Éen fout kan al snel meerdere gevolgen hebben.\\*\\*Het is dus voordelen om de beste oplossing te vinden voor de gekozen supply chain, betere optimalisatie betekent op zijn beurt ook weer mindere kosten en dat betekent minder kosten voor de eindklant. Optimalisatie is key.
+
+\section{Supply Chain Management}
+Bij een supply chain, hoort naturlijk ook een supply chain management systeem. Dit is meer te vergelijken met het digitale deel van de supply chain. Supply chain management kan gezien worden als een mantel van activiteiten dat bestaat uit het plannen, controleren en uitvoeren de processen van de supply chain, om dit zo vlot en kost efficiënt mogelijk te maken. Andere taken zijn onder andere controleren en beheren van de inventaris, het regelen van transportatie, het documenteren van alles...\\*\\*Een supply chain kan heel duur en complex zijn, daarom is het belangrijk om zo efficiënt mogelijk te werk te gaan. Er zijn en paar software paketten op de markt dat verspreid gebruikt worden: ERP, Oracle en SAP. Je kan deze software de ruggengraat noemen van een bedrijfscentrische supply chain. Supply chain management zorgt voor de planningen van alle activiteiten, risico beheer, opvolgen en optimaliseren van de inventaris, het regelen van transport, alles documenteren, dag tot dag productie...
+~\autocite{scm1}
+
+\chapter{Problemen met supply chain}
+
+\chapter{HyperLedger composer prototype}
+\section{Wat is hyperledger composer?}
+Hyperledger composer is een open ontwikkelings tool om blochchain applicaties te maken. Een business netwerk kan makkelijk worden omgezet in een blockchain netwerk. Het maakt gebruik van middelen, zoals tomaten, certificaten, vervoer. Het maakt gebruik van transacties dat inwerkt in de middelen. Daarnaast heb je ook nog toegang tot toeganscontrole, identiteiten en andere deelnemers in het netwerk, zoals de koper en verkoper, leveranciers en fabrieken.\\*\\*Met hyperledger composer kan een protoype opgezet worden om de supply chain te simuleren in de agricultuur.
+~\autocite{composer1}
+
+\section{Netwerk voorstelling}
+Om deze simulatie zo goed mogelijk te laten verlopen, werd er een fictief netwerk opgesteld van bedrijven. Deze bedrijven bevatten de volgende soorten: "supplier", "manufacturer", "contributer", "retailer", "customer". Elk soort bedrijf heeft een paar voorbeelden gekregen. Buiten de bedrijven mogen we de producten ook zeker niet vergeten. In dit netwerk draait alles om tomaten. Wat er nodig is om tomaten te maken, van deze tomaten producten maken en deze te verkopen. Naast de bedrijven en producten, hebben alle bedrijven ook een eigen Wallet, voor de transacties zo goed mogelijk te simuleren. Hier onder wordt er een tabel gegeven van alle informatie dat beschikbaar is:
+
+Zie Bijlage C voor alle gegevens te bekijken.
+
+Een netwerk in supply chain is nooit zomaar een ketting van bedrijven. Het is een heel netwerk op zich. De ene output van een bedrijf kan de input betekenen van een ander bedrijf. Een bedrijf heeft veel verschillende zaken nog voor het maken van een product, maar in deze simulatie wordt er gefocust op tomaten. Zie hier een foto van 1 ketting in een heel netwerk:
+
+\begin{center}
+\includegraphics[width=15cm]{img/ketting}\\[2cm]
+\end{center}
+
+Maar meestal is een supply chain netwerk niet gewoon 1 ketting, maar dan bestaat dit uit een netwerk van kettingen, zoals dit te zien is op onderstaande foto ~\autocite{pic1}.
+
+\begin{center}
+	\includegraphics[width=15cm]{img/netwerk}\\[3cm]
+\end{center}
+\section{Gebruikte technologieën}
+\textbf{HyperLedger Composer}
+
+Met behulp van de HyperLedger composer, is er een netwerk opgesteld van bedrijven en producten.
+Hiervoor zijn een paar stappen nodig:
+
+\begin{enumerate}
+	\item Hyperledger fabric starten starten
+	\begin{center}
+		\includegraphics[width=13cm]{img/start-fabric}\\[1cm]
+	\end{center}
+	Om het netwerk te gebruiken en er moeten we het eerste starten met bovenstaande starten. In dit voorbeeld is hyperledger fabric al geïnstalleerd.\\*
+	\item Netwerk starten
+	\begin{center}
+		\includegraphics[width=13cm]{img/install-network}\\[1cm]
+		\includegraphics[width=13cm]{img/start-network}\\[1cm]
+	\end{center}
+	Bij het installeren en het starten van het netwerk worden gegevens meegegeven zoals de admin kaart, de bna file waar alles gecompesseerd instaat, de versie van het netwerk dat ingesteld wordt in de package.json...\\*
+	\item Composer rest server starten
+	\begin{center}
+		\includegraphics[width=13cm]{img/start-rest}\\[1cm]
+	\end{center}
+	Via HyperLedger wordt er gezorgd voor een rest-api server. Met behulp van deze lokale server kunnen er verzoeken verzonden worden vanaf een applicatie naar de rest-api server dat op zich de nodige data uit het netwerk zal halen. Hier wordt meer op in gegaan in het deel van NodeJS.\\*
+\end{enumerate}
+
+Het netwerk bestaat uit een aantal bestanden: een model bestand, waar alle bedrijven en producten worden gedefiniëerd, maar ook de verschillende transacties. Een logica bestand waar de logica instaat tijdens het uitvoeren van een transactie. Er wordt ook gebruik gemaakt van een acces file, hierin staan alle beveiligingsregels van wie wat mag doen op het netwerk. Er wordt niet verder ingegaan op dit bestand in deze simulatie.
+
+Dit is de gebruikte structuur van het model bestand. Op de foto is onder andere het product en het bedrijf te zien, net zoals een transactie en een event declaratie.\\*\\*In de volgende foto is dan weer de logica te zien van een transactie. Hier in wordt het register van alle producten opgehaald en wordt het product dat aangepast wordt geüpdatet. Daarna wordt er een nieuwe event aangemaakt dat zichtbaar zal zijn in de NodeJS applicatie.
+
+\begin{center}
+	\includegraphics[width=11cm]{img/model-example}\\[1cm]
+\end{center}
+
+\begin{center}
+	\includegraphics[width=14cm]{img/logic-example}\\[1cm]
+\end{center}
+
+\textbf{NodeJS}
+
+Omdat het netwerk elk keer weer leeg is als het opnieuw wordt opgestart, moeten we een manier vinden het netwerk terug te vullen met informatie. Dit kan gedaan worden door de "composer-client" package te gebruiken in NodeJS.
+
+Eerst zal er een connectie gemaakt moeten worden met het netwerk via de "composer-client":
+\begin{center}
+	\includegraphics[width=13cm]{img/composer-info}\\[1cm]
+	\includegraphics[width=13cm]{img/composer-start}\\[1cm]
+	\includegraphics[width=13cm]{img/composer-connect}\\[1cm]
+\end{center}
+
+Er zijn 3 verschillende scripts geschreven: een script om het netwerk te vullen met gegevens, een script om alle informatie in het netwerk te verwijderen en een script dat luistert naar event uit het netwerk.\\*
+
+\begin{center}
+	\includegraphics[width=14cm]{img/create-create}\\[1cm]
+	\includegraphics[width=14cm]{img/create-send}\\[1cm]
+\end{center}
+
+In het script om het netwerk met gegevens te vullen, wordt er van elk gegeven het bijhorende object gemaakt, dit wordt gepushed in een overkoepelende array en dan in één keer naar het netwerk verstuurd.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/delete-delete}\\[1cm]
+\end{center}
+
+In het script om alle informatie te verwijderen, wordt eerst alle informatie opgehaald met de registers en daarna allemaal verwijderd.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/listen-listen}\\[1cm]
+\end{center}
+
+In het script dat luistert naar de verschillende events, wordt er elke keer dat er een event ontvangen wordt naar de naam gekeken en gebaseerd daarop wordt de juiste melding terug gegeven.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/listen-results}\\[1cm]
+\end{center}
+
+\textbf{React Native}
+
+Als voorbeeld werd er een mobiele applicatie geschreven.Later in de demonstratie wordt hier grondiger op in gegaan. In deze applicatie heeft de gebruiker de keuze tussen de soorten bedrijven en daarna een specifiek bedrijf binnen die branche. De gebruiker krijgt de keuze tussen 3 acties dat een bedrijf kan verrichten, van zodra de correcte gegevens worden ingevuld, krijgt de gebruiker een overzicht te zien van alle specifieke stappen dat ondergaan werden tijdens de transactie. Hieronder volgen nog een paar voorbeelden van gebruikte code:
+
+\begin{center}
+	\includegraphics[width=14cm]{img/react-types}\\[1cm]
+\end{center}
+
+In de bovenstaande foto wordt er naar elk type gekeken van elk bedrijf. Alleen als dat type nog niet in de array staat, wordt deze toegevoegd. Dit is belangrijk om dynamisch alle soorten bedrijven op te halen.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/react-action}\\[1cm]
+\end{center}
+
+Dit is een voorbeeld van een transactie verzonden wordt vanuit de front-end. Het is nodig om de juiste transactienaam mee te geven, samen met de bijhorende variabelen zoals het product en het aantal.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/react-info}\\[1cm]
+\end{center}
+
+Elke transactie op het netwerk heeft zijn eigen transactieID. Dit kregen we terug in de vorige foto. Met dit transactionID kunnen we de volledige transactie terug ophalen en daar de gegevens ook terug uithalen.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/react-api}\\[1cm]
+\end{center}
+
+Om dit alles te kunnen doen, moet er natuurlijk een api worden aangesproken. Omdat de API normaal op een localhost draait, gebruiken we NgRok om dit open te stellen op het internet. Daarna kan je de correcte link aanroepen en ofwel een get, post, delete, put verzoek sturen naar de server.
+
+\section{Demonstratie}
+
+\textbf{Demonstratie 1}
+
+Zie Bijlage A waar de screenshots staan van de applicatie. Deze screenshots zijn per demonstratie in de juiste volgorde gezet.
+
+Bij het openen van de applicatie wordt de keuze gegeven tussen de verschillende soorten bedrijven, in het eerste voorbeeld wordt de "SUPPLIER" genomen. Daarna komt er een nieuw scherm waar de keuze gemaakt wordt tussen de verschillende bedrijven.
+
+Elk soort bedrijf heeft zijn eigen acties dat ze kunnen uitvoeren op het netwerk. Een supplier kan nu alleen maar zijn eigen voorraad vergroten. Bij het uitvoeren van de actie wordt er gevraagd naar het bepaalde product en hoeveelheid. De getoonde producten in de lijst zijn alleen maar producten dat dat ene bedrijf kan maken.
+
+In de laatste stap van de applicatie wordt er stap voor stap getoond wat er precies allemaal gebeurt tijdens de transactie. Er wordt informatie getoond zoals de naam van het bedrijf en de voorraad van het bepaalde product.
+
+
+\textbf{Demonstratie 2}
+
+De uitleg bij demo 2 en 3 zijn grotendeels hetzelfde. De flow van de applicatie is makkelijk af te leiden ui de screenshots.
+
+Zie Bijlage A demo 2.
+
+\textbf{Demonstratie 3}
+
+Zie Bijlage A demo 3.
+
+\section{Mogelijke uitbreidingen}
+Natuurlijk is dit nog maar een minimaal prototype, er zijn zeker nog veel mogelijke uitbreidingen.\\*\\*
+Een van de belangrijkste uitbreidingen dat hier nog gemaakt kunnen worden is het implementeren van een zoekfunctie dat voor de gebruiker een perfecte route gaat zoeken. Er zou dan gefilterd kunnen worden op snelste route, goedkoopste route, de route met de beste kwaliteit of combinatie van meerdere factoren. Omdat de prijzen van de bedrijven openlijk verkrijgbaar zijn op het netwerk, is deze optie zeker doenbaar.\\*\\*Een logische uitbreiding is het toevoegen van meerdere producten in de supply chain. Zoals voor de bedrijven dat lasagne of soep maken, zullen er meer producten nodig zijn dan alleen maar tomaten. Dit geldt natuurlijk ook voor meerdere bedrijven.\\*\\*In dit prototype is niet verder ingegaan op de access file, dat kan ook een verdere uitbreiding worden. Dankzij de access file wordt er beslist wie precies wat mag doen op het netwerk.
+
+\section{Conclusie Hyperledger composer}
+De vraag 'Hoe kan er met zekerheid gezegd worden dat de producten authentiek zijn?' kan nu al beantwoord worden met de met de informatie dat er tot nu toe al verzameld is. Op de manier dat informatie wordt opgeslagen op een blockchain kan er gezegd worden dat deze informatie niet aangepast kan worden, de data kan niet vervalst worden. Als een persoon deze informatie wil veranderen, zal de hash waarde niet meer overeenkomen met de historiek van andere nodes. Deze persoon zou daarom alle hash waarden moeten gaan aanpassen, en dat is nu onmogelijk. Op het netwerken heeft een bedrijf ook bepaalde rechten, dus een bedrijf kan niet zo maar de voorraad van een ander bedrijf gaan aanpassen. Dankzij deze historiek dat bijgehouden wordt kan er perfect aangetoond worden van waar een product precies afkomstig is en kan deze informatie dus ook als betrouwbaar aanzien worden.
+
+\chapter{Uitvoeren testen}
+\section{Schetsen van de situatie}
+Voor een bedrijf is de snelheid van het netwerk ook zeker een belangrijk aspect. Een bedrijf kan niet zitten wachten op transacties dat in queue staan om uitgevoerd te worden. Daarom worden er ook een paar snelheidstesten losgelaten op het netwerk. Dit netwerk werd opgesteld op een virtuele machine, de testen duren daarom dus ook langer dan normaal. Op volgende transacties wordt de snelheid getest:\\*\\*
+\begin{enumerate}
+	\item Creatie van informatie
+	\item Verwijderen van informatie
+	\item Ophalen van alle producten / bedrijven
+	\item Opzoeken van één bepaalde ID
+\end{enumerate}
+
+\section{Uitgevoerde testen}
+Elke test wordt 30 keer uitgevoerd...\\*
+\textbf{Creatie van informatie}
+
+Er worden twee verschillende testen uitgevoerd voor de creatie van de informatie. De gegevens kunnen in één lijst verstuurd worden om aan te maken op het netwerk of dit kan gegeven per gegeven verstuurd worden. Hier wordt getest of er een verschil bestaat tussen deze twee manieren. Er werd getest met 5, 50 en 100 producten. Er worden geen testen uitgevoerd met meer producten omdat er vanaf dan timeout errors worden gegeven.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-createProductOnce}\\[1cm]
+\end{center}
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-createProductOnePerOne}\\[1cm]
+\end{center}
+
+\textbf{Verwijderen van informatie}
+
+De volgende transactie dat getest zal worden is het verwijderen van alle informatie. Dit kan ook gebeuren één per één of alles in één keer. Hierbij wordt er ook getest met 5, 50 en 100 producten.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-removeProductOnce}\\[1cm]
+\end{center}
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-removeProductOnePerOne}\\[1cm]
+\end{center}
+
+\textbf{Ophalen van alle producten / bedrijven}
+
+Bij deze test is het de bedoeling om te kijken of er een groot verschil bestaat tussen het opvragen van alle informatie. Hier wordt er nogmaals gebruik gemaakt van 5, 50 en 100 producten.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-getAllProducts}\\[1cm]
+\end{center}
+
+\textbf{Opzoeken van één bepaalde ID}
+
+Als laatste wordt er onderzocht of er een verschil bestaat tussen het ophalen van één bepaald product in een lijst van meerdere producten. Nogmaals worden er hier 5, 50 en 100 producten gebruikt.
+
+\begin{center}
+	\includegraphics[width=14cm]{img/test-function-getID}\\[1cm]
+\end{center}
+
+\section{resultaten}
+Alle resultaten zijn uitgedrukt in seconden...
+\begin{enumerate}
+	\item Creatie van informatie\\*
+	
+		\textbf{Alle producten in 1 keer}\\*
+		
+		 Voor de ruwe resultaten, zie Bijlage B.\\*
+		
+		\textbf{Alle producten apart}\\*
+		
+		 Voor de ruwe resultaten, zie Bijlage B.\\*
+		
+		\begin{center}
+			\includegraphics[width=12cm]{img/test-box-1}\\[1cm]
+		\end{center}\begin{center}
+			\includegraphics[width=12cm]{img/test-column-1}\\[1cm]
+		\end{center}
+		Als er gekeken wordt naar het gemiddelde van 50 producten in één keer toevoegen of 50 producten één voor één toevoegen, kan er geconcludeerd worden dat er toch een redelijk groot verschil bestaat tussen deze twee manieren. Er wordt elke keer een extra call gedaan naar het netwerk en daar wordt er tijd verloren. Voor het apart toevoegen van 50 prodcuten kan het wel tot bijna 3 minuten duren.\\*
+		
+		
+	\item Verwijderen van informatie\\*
+	
+		 Voor de ruwe resultaten, zie Bijlage B.\\*
+		
+		\begin{center}
+			\includegraphics[width=12cm]{img/test-box-2}\\[1cm]
+		\end{center}\begin{center}
+			\includegraphics[width=12cm]{img/test-column-2}\\[1cm]
+		\end{center}
+		Bij het verwijderen van gegevens konden de testen van het product een voor een te verwijderen niet uitgevoerd worden. Omdat deze veel te lang duurde gaf het netwerk een time out. De tijd bij deze testen is langer dan verwacht, het verwijderen duurt langer dan het aanmaken. Opnieuw liggen de resultaten dicht bij elkaar.\\*
+	
+	\item Ophalen van alle producten / bedrijven\\*
+
+		 Voor de ruwe resultaten, zie Bijlage B.\\*
+
+		\begin{center}
+			\includegraphics[width=12cm]{img/test-box-3}\\[1cm]
+		\end{center}\begin{center}
+			\includegraphics[width=12cm]{img/test-column-3}\\[1cm]
+		\end{center}
+		In deze liggen de resultaten een beetje meer verspreid van elkaar als er gekeken wordt naar de boxplot. Het ophalen van alle gegevens gaat nog relatief gezien snel in vergelijking met het toevoegen en verwijderen.\\*
+	
+	\item Opzoeken van één bepaalde ID\\*
+	
+		 Voor de ruwe resultaten, zie Bijlage B.\\*
+	
+		\begin{center}
+			\includegraphics[width=14cm]{img/test-column-4}\\[1cm]
+		\end{center}
+		\begin{center}
+			\includegraphics[width=14cm]{img/test-column-5}\\[1cm]
+		\end{center}
+		Wat heel merkwaardig is bij deze testen is dat het blijkt dat de producten met de hogere id's minder lang duren dan de producten met een klein id. Dit kan zijn omdat de lijst omgekeerd onderzocht wordt, maar hier werd niet meer informatie over gevonden.
+\end{enumerate}
+\section{conslusie resultaten}
+Spijtig genoeg konden sommige testen niet worden uitgevoerd omdat het netwerk te traag was op de virtuele machine. De conclusie uit deze testen is dat het altijd beter is om een hele lijst mee te geven aan een functie dan elk object apart te versturen.De resultaten zijn redelijk consistent in de uitvoeringstijd als er gekeken wordt naar de boxplotten. Soms waren er verassende resultaten zoals het verwijderen dat langen duurt dan het toevoegen en het ophalen van een hoger id dat minder lang duurde dan het ophalen van een lager id.
+
+\chapter{Toekomstig werk}
+Zoals eerder al aangehaald in deze bachelorproef, blijft technologie maar evolueren. Het is belangijk dat er mee wordt gegaan met de tijd. Blockchain technologie staat nog in zijn peuterschoentjes en er is nog veel dat onderzocht moet worden in verband met decentralisatie, beveiliging en uitbreidbaarheid. Het hele gebeuren rond supply chain is ook heel complex, er zal diep onderzoek gedaan moet worden hoe deze twee technologieën perfect in harmonie kunnen samenwerken. Bijvoorbeeld kan er een meer dynamisch netwerk opgesteld worden waardat de gebruikers zich werkelijk inloggen als een bedrijf en zelf ook producten kunnen toevoegen en bij andere bedrijven verkopen en kopen.\\*\\*
+Wat nog verder getest kan worden is de transparantie van het netwerk. Wat mag een bedrijf bekijken op het netwerk en wat niet. Kiest een bedrijf er zelf voor of het zichtbaar is naar de buitenwereld enzovoort.\\*\\*
+Deze bachelorproef creëert ook nog een paar andere vragen wat verder onderzocht moet worden:
+
+\begin{enumerate}
+	\item Voor welke bedrijven is het nuttig om met blockchain technologie te integreren?
+	\item Wat is nuttiger voor een supply chain netwerk? Publiek of privaat?
+	\item Welke blockchain technologie kan het beste gebruikt worden voor een supply chain?
+\end{enumerate}
+
+\input{conclusie}
+
+%%=============================================================================
+%% Bijlagen
+%%=============================================================================
+
+\appendix
+
+%%---------- Onderzoeksvoorstel -----------------------------------------------
+
+\chapter{Onderzoeksvoorstel}
+
+Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat vooraf werd beoordeeld door de promotor. Dat voorstel is opgenomen in deze bijlage. Door veranderingen na het voorstel is dit voostel niet helemaal up to date. Dit voorstel moest dus ook niet aangepast worden voor deze bachelorproef.
+
+% Verwijzing naar het bestand met de inhoud van het onderzoeksvoorstel
+\includepdf[pages=-]{../voorstel/vanhecke_wouter_voorstel.pdf}
+
+%%---------- Andere bijlagen --------------------------------------------------
+% TODO: Voeg hier eventuele andere bijlagen toe
+\chapter{Bijlage}
+\input{app}
+\input{results}
+\input{data}
+
+%%---------- Referentielijst --------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+%\addcontentsline{toc}{chapter}{\textcolor{maincolor}{\IfLanguageName{dutch}{Bibliografie}{Bibliography}}}
+
+\end{document}

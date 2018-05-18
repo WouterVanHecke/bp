@@ -1,0 +1,28 @@
+%%=============================================================================
+%% Methodologie
+%%=============================================================================
+
+\chapter{Methodologie}
+\label{ch:methodologie}
+
+%% TODO: Hoe ben je te werk gegaan? Verdeel je onderzoek in grote fasen, en
+%% licht in elke fase toe welke stappen je gevolgd hebt. Verantwoord waarom je
+%% op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
+%% mogelijke manier toegepast hebt om een antwoord te vinden op de
+%% onderzoeksvraag.
+\section{Literatuurstudie}
+Voor deze bachelorproef is er een basis nodig aan kennis van bepaalde termen, waar onder blockchain en supply chain. Om verder te gaan met het onderzoek moesten deze termen eerst onderzocht worden aan de hand van een literatuurstudie. Bitcoin was de eerste term dat onderzocht werd, omdat het daar eigenlijk allemaal begonnen in. Bij het onderzoeken van blockchain hoort dus ook wat onderzoek naar het ontstaan van Bitcoin. Hierbij werden verschillende artikels bekeken om kennis te vergaren over Bitcoin. Vervolgens was blockchain aan de beurt, om hier informatie over te verkrijgen was onder andere het boek Blockchain Basics benut. In dit boek stonden er aspecten wat de term blockchain precies inhoud en wat het wil bereiken. Ook was er informatie te vinden hoe het op een abstract level inhoudelijk in elkaar zit, wat een goed zicht gaf om te begrijpen wat blockchain precies is en hoe het best gebruikt kan worden.\\*\\*
+Daarna was het de beurt aan supply chain. Hierbij werd er in het begin onderzocht wat supply chain en supply chain management precies inhouden. Dan kwamen de problemen van een supply chain. Omdat blockchain al onderzocht was, kon er op het einde van de literatuurstudie al geantwoord worden op de vraag wat welke problemen een blockchain (nog) niet kan oplossen.
+
+\section{Prototype}
+Als tweede deel werd een prototype gemaakt van een supply chain op een blockchain. Hiervoor waren er 2 opties: Ethereum en Hyperledger composer. Met Ethereum zou er een smart contract gemaakt worden om zo het netwerk te simuleren. Maar Hyperledger composer is specifiek bedoeld om netwerken op te bouwen. Daarom lag de keuze al snel bij Hyperledger composer. Als eerste werd er een netwerk bedacht dat bestaat uit bedrijven en producten. Omdat de focus hier gelegd werd bij agricultuur, zullen de producten gesimuleerd worden als tomaten. Er werden verschillende soorten bedrijven gekozen dat elk met hun eigen producten werkten, bijvoorbeeld lasagna of spaghetti saus, dat dus ook gemaakt wordt van tomaten. Om deze gegevens op het netwerk te zetten, moet er wel eerst een netwerk zijn. Dit netwerk opstellen was ook helemaal nieuw, dus moest er onderzocht worden hoe dit precies in elkaar zat. In de loop van dit prototype werd er een Hyperledger composer netwerk opgesteld dat het netwerk simuleerde, een NodeJS applicatie dat de informatie regelde van het netwerk en een mobiele applicatie dat met dit netwerk kon communiceren. Hoe dit netwerk met de applicaties werden opgesteld, komt verder aan bod in Hoofdstuk 8.
+
+\section{Testen}
+Ten slotte, werden er enkele testen geschreven dat werken uitgevoerd op het netwerk. De snelheid van een netwerk is heel belangrijk voor een bedrijf dat dit netwerk gebruikt. Omdat deze testen lijken op de NodeJS applicatie, zijn er stukken code uit de applicatie gehaald en hergebruikt. Deze testen kunnen dus ook gezien worden als NodeJS scripts. Omdat het prototype gemaakt was in een virtuele machine, had het netwerk ook zo zijn limitaties. Daarom konden sommige testen spijtig genoeg niet uitgevoerd worden omdat ze te lang duurde en het netwerk dit niet aankon. Hierbij horen de testen van het verwijderen van veel gegevens. Alle (andere) testen werd uitgevoerd met een verschillend aantal gegevens, met de bedoeling om te kijken of het aantal gegevens dat zich op het netwerk bevond, een groot verschil uitmaakte voor de snelheid van de transacties. Hieronden bevinden zich alle testen dat zijn uitgevoerd:\\*
+\begin{enumerate}
+	\item Creatie van informatie
+	\item Verwijderen van informatie
+	\item Ophalen van alle producten / bedrijven
+	\item Opzoeken van één bepaalde ID
+\end{enumerate}
+

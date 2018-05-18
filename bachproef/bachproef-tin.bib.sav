@@ -1,0 +1,111 @@
+% Encoding: UTF-8
+@book{Knuth1998,
+ author = {Knuth, Donald E.},
+ title = {The art of computer programming,  volume 3: (2nd ed.) sorting and searching},
+ year = {1998},
+ publisher = {Addison Wesley Longman Publishing Co., Inc.},
+ address = {Redwood City, CA, USA}
+}
+
+@book{Pollefliet2011,
+  author = {Pollefliet, Leen},
+  title = {Schrijven van verslag tot eindwerk: do's en don'ts},
+  year = {2011},
+  publisher = {Academia Press},
+  address = {Gent}
+}
+
+@article{Creeger2009,
+  author = {Creeger, Mache},
+  journal = {Communications of the ACM},
+  number = {8},
+  pages = {50--56},
+  title = {{CTO Roundtable: Cloud Computing}},
+  volume = {52},
+  year = {2009}
+}
+
+@WWW{supchain1,
+  author = {Harry Goodnight},
+  title  = {Managing Supply Chains on the Blockchain: A Primer},
+  year   = {2017},
+  date   = {2017-07-10},
+  url    = {https://blog.sweetbridge.com/managing-supply-chains-on-the-blockchain-a-primer-1f7dc293e3d9},
+}
+
+@WWW{agri1,
+  author = {Jeffrey Hays},
+  title  = {AGRICULTURE IN CHINA},
+  year   = {2008},
+  url    = {http://factsanddetails.com/china/cat9/sub63/item348.html},
+}
+
+@WWW{prob1,
+  author = {Andy Uhlenberg},
+  title  = {Key Issues in Supply Chain Management and How to Overcome Them},
+  year   = {2017},
+  date   = {2017-09-18},
+  url    = {https://www.liaison.com/blog/2017/09/18/key-issues-supply-chain-management-overcome/},
+}
+
+@WWW{bit1,
+  author = {Satoshi Nakamoto},
+  title  = {Bitcoin: A Peer-to-Peer Electronic Cash System},
+  year   = {2008},
+  url    = {https://bitcoin.org/bitcoin.pdf},
+}
+
+@WWW{hist1,
+  author = {Bernard Marr},
+  title  = {A Short History Of Bitcoin And Crypto Currency Everyone Should Read},
+  year   = {2017},
+  date   = {2017-12-06},
+  url    = {https://www.forbes.com/sites/bernardmarr/2017/12/06/a-short-history-of-bitcoin-and-crypto-currency-everyone-should-read/#5eeca9563f27},
+}
+
+@WWW{voor1,
+  author = {Verdanov},
+  title  = {Bitcoin: wat zijn de voordelen en nadelen van bitcoins?},
+  year   = {2017},
+  date   = {2017-11-29},
+  url    = {https://financieel.infonu.nl/geld/121774-bitcoin-wat-zijn-de-voordelen-en-nadelen-van-bitcoins.html},
+}
+
+@WWW{wallet1,
+  author = {Ameer Rosic},
+  title  = {Paper Wallet Guide: How to Protect Your Cryptocurrency},
+  year   = {2017},
+  date   = {2017-07-16},
+  url    = {https://blockgeeks.com/guides/paper-wallet-guide/},
+}
+
+@Book{blockchain1,
+  author = {Daniel Drescher},
+  title  = {Blockchain Basics},
+  year   = {2017},
+}
+
+@WWW{scm1,
+  author = {Scrc Sme},
+  title  = {What is Supply Chain Management (SCM)?},
+  year   = {2017},
+  date   = {2017-04-02},
+  url    = {https://scm.ncsu.edu/scm-articles/article/what-is-supply-chain-management-scm},
+}
+
+@WWW{composer1,
+  author = {Hyperledger},
+  title  = {HyperLedger Composer},
+  year   = {2015},
+  url    = {https://hyperledger.github.io/composer/latest/},
+}
+
+@WWW{pic1,
+  author = {Can Celikbilek},
+  title  = {A Fuzzy Approach for a Supply Chain Network Design Problem - Scientific Figure on ResearchGate},
+  year   = {2015},
+  date   = {2015-05-01},
+  url    = {https://www.researchgate.net/figure/A-generic-supply-chain-network_fig1_280158117},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
